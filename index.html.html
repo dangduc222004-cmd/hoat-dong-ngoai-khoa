@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoạt Động Ngoại Khóa - Tuổi Trẻ Năng Động</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f9ff;
+    color: #263449;
+}
+
+header {
+    background: #ffffff;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px #00000012;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #1677e8;
+}
+
+nav a {
+    text-decoration: none;
+    color: #263449;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #1677e8;
+}
+
+.hero {
+    min-height: 540px;
+    background:
+    linear-gradient(90deg, #063d75dd, #063d7533),
+    url("https://images.unsplash.com/photo-1529390079861-591de354faf5?w=1600");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffbd35;
+    color: #17385c;
+    padding: 14px 27px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+section {
+    padding: 75px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    color: #1268c9;
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #718096;
+    line-height: 1.7;
+}
+
+.intro {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+.activities {
+    background: #eaf3ff;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #00000010;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px #00000020;
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 23px;
+}
+
+.card h3 {
+    color: #1268c9;
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.card p {
+    line-height: 1.7;
+    color: #667085;
+}
+
+.benefits {
+    background: white;
+}
+
+.benefit-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.benefit {
+    padding: 28px;
+    background: #f0f7ff;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.benefit span {
+    font-size: 40px;
+}
+
+.benefit h3 {
+    color: #1268c9;
+    margin: 15px 0;
+}
+
+.benefit p {
+    line-height: 1.7;
+    color: #667085;
+}
+
+.quote {
+    text-align: center;
+    background: #176bc2;
+    color: white;
+    padding: 65px 10%;
+}
+
+.quote h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.quote p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+footer {
+    background: #102c4d;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    line-height: 1.8;
+}
+
+@media(max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 6px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🌟 TUỔI TRẺ NĂNG ĐỘNG</div>
+
+    <nav>
+        <a href="#home">Trang chủ</a>
+        <a href="#about">Giới thiệu</a>
+        <a href="#activities">Hoạt động</a>
+        <a href="#benefits">Ý nghĩa</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <div class="hero-content">
+        <h1>KHÁM PHÁ THẾ GIỚI NGOẠI KHÓA!</h1>
+
+        <p>
+            Học tập không chỉ diễn ra trong lớp học.
+            Hãy cùng tham gia những hoạt động ngoại khóa
+            thú vị, khám phá tài năng, kết nối bạn bè
+            và tạo nên những kỷ niệm tuổi học trò đáng nhớ!
+        </p>
+
+        <a href="#activities" class="btn">Khám phá ngay →</a>
+    </div>
+</div>
+
+<section id="about">
+    <div class="section-title">
+        <h2>VỀ HOẠT ĐỘNG NGOẠI KHÓA</h2>
+        <p>Học hỏi hôm nay – Trưởng thành ngày mai</p>
+    </div>
+
+    <div class="intro">
+        <p>
+            Hoạt động ngoại khóa là một phần quan trọng
+            trong môi trường giáo dục. Đây là cơ hội để
+            học sinh được trải nghiệm thực tế, phát triển
+            kỹ năng sống, rèn luyện sức khỏe và khám phá
+            những khả năng tiềm ẩn của bản thân.
+        </p>
+        <br>
+        <p>
+            Mỗi hoạt động đều mang đến những bài học
+            bổ ích, giúp chúng ta tự tin hơn, sáng tạo hơn
+            và biết yêu thương, chia sẻ với mọi người.
+        </p>
+    </div>
+</section>
+
+<section class="activities" id="activities">
+    <div class="section-title">
+        <h2>NHỮNG HOẠT ĐỘNG NỔI BẬT</h2>
+        <p>Mỗi trải nghiệm là một hành trình trưởng thành!</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=800"
+            alt="Hoạt động văn nghệ">
+            <div class="card-content">
+                <h3>🎤 Văn nghệ</h3>
+                <p>
+                    Những tiết mục ca hát, múa và biểu diễn
+                    giúp học sinh tự tin thể hiện tài năng,
+                    nuôi dưỡng niềm đam mê nghệ thuật.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800"
+            alt="Hoạt động thể thao">
+            <div class="card-content">
+                <h3>⚽ Thể thao</h3>
+                <p>
+                    Các môn bóng đá, bóng chuyền, cầu lông
+                    giúp nâng cao sức khỏe, tinh thần đồng đội
+                    và ý chí vượt qua thử thách.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800"
+            alt="Hoạt động tham quan">
+            <div class="card-content">
+                <h3>🚌 Tham quan, trải nghiệm</h3>
+                <p>
+                    Khám phá những vùng đất mới, tìm hiểu
+                    lịch sử và văn hóa, mở rộng kiến thức
+                    qua những chuyến đi thực tế.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800"
+            alt="Hoạt động tình nguyện">
+            <div class="card-content">
+                <h3>❤️ Tình nguyện</h3>
+                <p>
+                    Chia sẻ yêu thương, giúp đỡ cộng đồng,
+                    quyên góp sách vở và lan tỏa những
+                    hành động đẹp trong cuộc sống.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800"
+            alt="Bảo vệ môi trường">
+            <div class="card-content">
+                <h3>🌱 Bảo vệ môi trường</h3>
+                <p>
+                    Trồng cây xanh, thu gom rác thải,
+                    tái chế đồ dùng và xây dựng trường học
+                    xanh – sạch – đẹp.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800"
+            alt="Hoạt động câu lạc bộ">
+            <div class="card-content">
+                <h3>📚 Câu lạc bộ học tập</h3>
+                <p>
+                    Tham gia các câu lạc bộ tiếng Anh,
+                    khoa học, đọc sách và sáng tạo để
+                    phát triển kiến thức, kỹ năng.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="benefits" id="benefits">
+    <div class="section-title">
+        <h2>GIÁ TRỊ MÀ NGOẠI KHÓA MANG LẠI</h2>
+        <p>Không chỉ vui chơi mà còn học hỏi và trưởng thành</p>
+    </div>
+
+    <div class="benefit-list">
+
+        <div class="benefit">
+            <span>💪</span>
+            <h3>Phát triển thể chất</h3>
+            <p>Giúp cơ thể khỏe mạnh, năng động và tràn đầy năng lượng.</p>
+        </div>
+
+        <div class="benefit">
+            <span>🤝</span>
+            <h3>Kỹ năng giao tiếp</h3>
+            <p>Biết lắng nghe, hợp tác và xây dựng tình bạn đẹp.</p>
+        </div>
+
+        <div class="benefit">
+            <span>💡</span>
+            <h3>Khơi dậy sáng tạo</h3>
+            <p>Khám phá tài năng và phát triển tư duy độc lập.</p>
+        </div>
+
+        <div class="benefit">
+            <span>🌈</span>
+            <h3>Lưu giữ kỷ niệm</h3>
+            <p>Tạo nên những khoảnh khắc vui vẻ và đáng nhớ của tuổi học trò.</p>
+        </div>
+
+    </div>
+</section>
+
+<div class="quote">
+    <h2>✨ TUỔI TRẺ LÀ ĐỂ TRẢI NGHIỆM!</h2>
+    <p>
+        Đừng chỉ học qua trang sách, hãy bước ra thế giới,
+        khám phá điều mới mẻ và biến mỗi ngày đến trường
+        thành một hành trình đầy niềm vui.
+        <br><br>
+        <b>Học hết mình – Chơi hết sức – Sống thật ý nghĩa!</b>
+    </p>
+</div>
+
+<footer>
+    <h3>🌟 HOẠT ĐỘNG NGOẠI KHÓA HỌC ĐƯỜNG 🌟</h3>
+    <p>Thanh xuân rực rỡ – Trải nghiệm tuyệt vời – Tương lai rộng mở</p>
+    <p>© 2026 | Website giới thiệu hoạt động ngoại khóa</p>
+</footer>
+
+</body>
+</html>
+s
